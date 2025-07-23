@@ -1,0 +1,121 @@
+/* ==== Base / Reset ==== */
+/* Global box model, spacing reset, body font & background */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: #000000f2;
+  background-color: #fffdfb;
+}
+
+/* ==== Typography ==== */
+/* Headings, section titles, font styles, link hovers, etc. */
+.page-title {
+  font-size: 28px;
+  color: #b53811;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 20px;
+  margin: 24px 0 12px;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  margin: 16px 0 8px;
+}
+
+/* ==== Layout / Containers ==== */
+/* Page-level layout stuff: header, footer, main containers */
+.page-header {
+  background-color: #fef9f4;
+  padding: 20px;
+  border-bottom: 2px solid #ddd;
+}
+
+.page-footer {
+  margin: 24px 0;
+  text-align: center;
+}
+
+.recipe-content {
+  width: 60%; /* Centers the content and keeps lines readable */
+  margin: auto; /* Horizontally centers the content block */
+  padding: 0 16px;
+}
+
+/* ==== Homepage: Recipe List Styles ==== */
+/* Grid or flex display for homepage recipe thumbnails */
+.recipe-list {
+  list-style: none; /* removes the bullet points */
+  padding: 20px;
+  text-align: center;
+}
+
+.recipe-list__item {
+  display: inline-block; /* appear side by side like cards */
+  border: 1px solid #00000026;
+  width: 230px;
+  overflow: hidden; /* prevents any content from leaking outside the box */
+  margin: 10px;
+}
+
+.recipe-link {
+  text-decoration: none; /* Removes the default underline from the <a> tag */
+  color: inherit; /* /* Avoids default blue color — inherits text color from the parent */
+  display: block; /* makes the link fill the whole card area = better click target */
+}
+
+.cover {
+  width: 100%;
+  height: 150px;
+  object-fit: cover; /* crops it smartly while filling the space — looks good, avoids squishing */
+  display: block; /* removes inline space below the image */
+}
+
+.recipe-link__text {
+  display: block;
+  padding: 10px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.recipe-link__text:hover {
+  /* On hover, underline the recipe name using the brand accent color */
+  text-decoration: underline;
+  text-decoration-color: #b53811;
+}
+
+/* ==== Recipe Page: Hero & Content ==== */
+/* Individual recipe pages — main image, description, sections */
+.hero__image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border: 1px solid #00000026;
+  margin-bottom: 16px;
+}
+
+.hero__description {
+  margin: 16px 0;
+}
+
+/* ==== Reusable Elements / Utilities ==== */
+/* List styles, hover effects, helper classes, spacing fixes */
+.list {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.ingredients__list li,
+.steps__list li {
+  /* Adds spacing between items in ingredients and steps lists */
+  margin-bottom: 10px;
+}
